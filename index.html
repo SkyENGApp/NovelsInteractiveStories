@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dracula: King of Darkness – An Interactive Gothic Novel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="description" content="Step into the shadows in Dracula: King of Darkness. An interactive novel where your choices shape the fate of the world's most famous vampire. Experience the epic journey from human warrior to the King of Darkness. Free on iOS.">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --blood-red: #8b0000;
+      --vampire-gold: #c5a059;
+      --deep-black: #050505;
+      --shadow-gray: #a0a0a0;
+      --soft-white: #e0e0e0;
+    }
+
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--deep-black);
+      color: var(--soft-white);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, .nav-logo { font-family: 'Cinzel', serif; }
+
+    /* NAVIGATION */
+    .top-nav {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(139, 0, 0, 0.3);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo { font-size: 22px; color: var(--blood-red); text-decoration: none; text-transform: uppercase; letter-spacing: 2px; }
+
+    /* HERO SECTION */
+    .hero {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 60px 20px;
+      background: radial-gradient(circle at 50% 40%, rgba(139, 0, 0, 0.25), transparent 70%), var(--deep-black);
+    }
+
+    .app-icon {
+      width: 140px;
+      height: 140px;
+      margin-bottom: 30px;
+      border-radius: 32px;
+      box-shadow: 0 0 50px rgba(139, 0, 0, 0.5);
+      border: 2px solid var(--vampire-gold);
+    }
+
+    h1 {
+      font-size: clamp(40px, 8vw, 80px);
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #fff 40%, var(--blood-red) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .tagline { font-size: clamp(18px, 3vw, 24px); color: var(--shadow-gray); margin-bottom: 40px; font-style: italic; }
+
+    .cta-button {
+      padding: 16px 40px;
+      background: var(--blood-red);
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border: 1px solid var(--vampire-gold);
+      transition: 0.3s;
+    }
+
+    .cta-button:hover { background: #5a0000; transform: scale(1.05); }
+
+    /* CHAPTERS SECTION */
+    .chapters { max-width: 1000px; margin: 0 auto; padding: 100px 20px; }
+    .section-title { text-align: center; font-size: 42px; color: var(--vampire-gold); margin-bottom: 80px; text-transform: uppercase; }
+
+    .chapter-card {
+      margin-bottom: 60px;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.03);
+      border-left: 4px solid var(--blood-red);
+      transition: 0.3s;
+    }
+
+    .chapter-card:hover { background: rgba(139, 0, 0, 0.05); }
+    .chapter-num { color: var(--blood-red); font-weight: bold; font-size: 14px; text-transform: uppercase; }
+    .chapter-title { font-size: 28px; margin: 10px 0; color: var(--soft-white); }
+    .chapter-desc { color: var(--shadow-gray); font-size: 17px; }
+
+    /* FOOTER */
+    footer { text-align: center; padding: 60px 20px; border-top: 1px solid rgba(139, 0, 0, 0.2); }
+    .footer-links a { color: var(--vampire-gold); text-decoration: none; margin: 0 15px; font-size: 14px; }
+  </style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <div class="nav-container">
+    <a href="#" class="nav-logo">Dracula</a>
+    <div style="display: flex; gap: 20px;">
+        <a href="https://apps.apple.com/app/id6755718958" style="color: white; text-decoration: none; font-size: 14px;">App Store</a>
+        <a href="mailto:codelovin@outlook.com" style="color: white; text-decoration: none; font-size: 14px;">Support</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <img src="dracula_icon.png" alt="Dracula Game Icon" class="app-icon">
+  <h1>King of Darkness</h1>
+  <p class="tagline">The night belongs to you. How will you rule it?</p>
+  <a href="https://apps.apple.com/app/id6755718958" class="cta-button">Download Now</a>
+</section>
+
+<section class="chapters">
+  <h2 class="section-title">An Eternal Chronicle</h2>
+
+  <div class="chapter-card">
+    <span class="chapter-num">Chapter I</span>
+    <h3 class="chapter-title">The Fall of a Knight</h3>
+    <p class="chapter-desc">Witness the transformation from a mortal warrior into the legendary Lord of Vampires. Revisit the tragedy that birthed the darkness.</p>
+  </div>
+
+  <div class="chapter-card">
+    <span class="chapter-num">Chapter II</span>
+    <h3 class="chapter-title">Whispers in the Night</h3>
+    <p class="chapter-desc">Navigate the courtly intrigues of Transylvania. Your choices determine who becomes an ally and who meets a bloody end.</p>
+  </div>
+
+  <div class="chapter-card">
+    <span class="chapter-num">Chapter III</span>
+    <h3 class="chapter-title">The Blood Covenant</h3>
+    <p class="chapter-desc">Bind your soul to ancient powers. Master the dark arts and manage your eternal thirst as you build your immortal empire.</p>
+  </div>
+
+  <div class="chapter-card">
+    <span class="chapter-num">Chapter IV</span>
+    <h3 class="chapter-title">Shadow of the Cross</h3>
+    <p class="chapter-desc">Face the hunters who seek to end your reign. Defend your castle and decide the fate of those who dare defy the King.</p>
+  </div>
+</section>
+
+<section style="text-align: center; padding: 100px 20px; background: linear-gradient(to bottom, #050505, #1a0000);">
+    <h2 style="font-family: Cinzel; color: var(--blood-red); margin-bottom: 20px;">Your Legend Awaits</h2>
+    <p style="color: var(--shadow-gray); margin-bottom: 40px;">Step into the shadows of the definitive interactive Dracula experience.</p>
+    <a href="https://apps.apple.com/app/id6755718958">
+      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on App Store" style="height: 55px;">
+    </a>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="mailto:codelovin@outlook.com">Contact Support</a>
+    <a href="#">Privacy Policy</a>
+  </div>
+  <p style="margin-top: 20px; font-size: 12px; color: #555;">&copy; 2025 King of Darkness. Inspired by the legends of old.</p>
+</footer>
+
+</body>
+</html>
